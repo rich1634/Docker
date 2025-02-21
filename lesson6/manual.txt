@@ -22,3 +22,9 @@ docker run -d --name nginx-container -p 8080:80 -v nginx-config:/usr/share/nginx
 # Создать файл docker-compose.yml (приложен)
 # Запусить контейнер 
  docker compose up -d
+
+
+#Возможно заложить создание volume в docker-compose.yml и тогда наш index.html будет монтироваться в создаваемый контейнер. Для этого создаем новый docker-compose-nginx.yml.
+Запускаем командой:
+
+docker compose -f docker-compose-nginx.yml up -d
